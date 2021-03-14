@@ -1,14 +1,9 @@
-# Welcome to your CDK TypeScript project!
-
-This is a blank project for TypeScript development with CDK.
-
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
-
-## Useful commands
-
- * `npm run build`   compile typescript to js
- * `npm run watch`   watch for changes and compile
- * `npm run test`    perform the jest unit tests
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk synth`       emits the synthesized CloudFormation template
+* This is based on https://cdkworkshop.com/20-typescript.html
+* Lambda function is passed downstream to a stack where it is invoked by another Lambda function
+* Updates conunter in Dynamodb
+* Uses TableViewer to see data in Dynamodb
+* Has five different tests to check constructs
+* Has Pipeline with Approval 
+* Has Integration testing stage in Pipeline
+* Can be used to count usage of API
+* Creates REST Api using API Gateway
