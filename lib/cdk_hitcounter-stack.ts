@@ -10,7 +10,7 @@ export class CdkHitcounterStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
-	// =====================================================================================
+	  // =====================================================================================
     // Hello Lambda for API Gateway
     // =====================================================================================
     // Use API Gatetway AWS Proxy template to test it from AWS Console
