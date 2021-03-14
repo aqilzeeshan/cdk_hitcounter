@@ -52,6 +52,11 @@ export class WorkshopPipelineStack extends cdk.Stack {
         const deploy = new WorkshopPipelineStage(this, 'Deploy');
         const deployStage = pipeline.addApplicationStage(deploy);
 
+        deployStage.addActions(new ManualApprovalAction({
+            actionName: 'ManualApproval',
+            runOrder: deployStage.nextSequentialRunOrder(),
+        }));
+
         deployStage.addActions(new ShellScriptAction({
             actionName: 'TestViewerEndpoint',
             useOutputs: {
