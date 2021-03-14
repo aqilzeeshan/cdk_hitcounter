@@ -10,4 +10,4 @@
 * Important to remember that package-lock.json needs to be ignored in .gitignore for SimpleSynthAction.standardNpmSynth to work. It expects it there.
 * Has self mutating Pipeline that means pipeline can change itself if any changes are made to it.
 * Only once `cdk deploy CdkWorkshopPipelineStack` needs to be deployed from commandline. After that always push changes to github and stacks will be updated all by themselves.
-* When deleting stacks always remember to delete in reverse order of creation. First delete `CdkHitcounterStack` and then delete `CdkWorkshopPipelineStack` otherwise you will be stuck with a stack which can't be deleted.
+* When deleting stacks always remember to delete in reverse order of creation. First delete `CdkHitcounterStack` and then delete `CdkWorkshopPipelineStack` otherwise you will be stuck with a stack which can't be deleted. If you forget to delete in correct order and your stack is stuck then follow instructions here https://aws.amazon.com/premiumsupport/knowledge-center/cloudformation-stack-delete-failed/ by creating IAM Role.
